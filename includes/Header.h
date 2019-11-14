@@ -7,8 +7,12 @@ using std::cout;
 using std::cin;
 using std::endl;
 
+// IOStream.cpp
 void	ClearInput();
 void	StringIO();
 void	NumIO();
+
+// Variables.cpp
+void	InitializingVariables();
 
 #endif

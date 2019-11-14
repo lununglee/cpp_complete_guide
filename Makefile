@@ -1,9 +1,9 @@
 # NAME OF EXECUTABLE
-NAME = main
+NAME = Main
 
 # COMPILER
 CC = g++
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -std=c++17
 
 # DIRECTORIES
 SRCDIR = ./srcs/
@@ -11,7 +11,7 @@ OBJDIR = ./objs/
 INCDIR = ./includes/
 
 # SRCS & OBJS
-SRCS = main.cpp
+SRCS = Main.cpp IOStream.cpp Variables.cpp
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 
 all: objs $(NAME)
