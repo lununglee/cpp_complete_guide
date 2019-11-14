@@ -3,6 +3,12 @@
 
 #include <iostream>
 
+using std::cout;
+using std::cin;
+using std::endl;
+
 void	ClearInput();
+void	StringIO();
+void	NumIO();
 
 #endif
