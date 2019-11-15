@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	InitializingVariables();
+	Constants();
 	return (0);
 }
