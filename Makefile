@@ -11,7 +11,18 @@ OBJDIR = ./objs/
 INCDIR = ./includes/
 
 # SRCS & OBJS
-SRCS = Main.cpp IOStream.cpp Variables.cpp PrimitiveTypes.cpp SizeOfOperator.cpp Constants.cpp Arrays.cpp
+SRCS = Main.cpp \
+	IOStream.cpp \
+	Variables.cpp \
+	PrimitiveTypes.cpp \
+	SizeOfOperator.cpp \
+	Constants.cpp \
+	Arrays.cpp \
+	Operators.cpp \
+	MixedExpressions.cpp \
+	Currency.cpp \
+	Loops.cpp
+
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 
 all: objs $(NAME)

@@ -4,10 +4,12 @@
 #include <iostream>
 #include <climits>
 #include <cfloat>
+#include <vector>
 
 using std::cout;
 using std::cin;
 using std::endl;
+using std::vector;
 
 // IOStream.cpp
 void	ClearInput();
@@ -28,4 +30,17 @@ void	Constants();
 
 // Arrays.cpp
 void	Arrays();
+void	Vectors();
+
+// Operators.cpp
+void	Operators();
+
+// MixedExpressions.cpp
+void	MixedExpressions();
+
+// Currency.cpp
+void	Currency();
+
+// Loops.cpp
+void	Loops();
 #endif

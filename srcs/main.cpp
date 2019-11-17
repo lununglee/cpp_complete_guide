@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	Constants();
+	Loops();
 	return (0);
 }
