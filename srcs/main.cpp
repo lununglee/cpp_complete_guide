@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	Loops();
+	LoopChallenge();
 	return (0);
 }

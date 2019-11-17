@@ -5,11 +5,14 @@
 #include <climits>
 #include <cfloat>
 #include <vector>
+#include <iomanip>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::vector;
+using std::fixed;
+using std::setprecision;
 
 // IOStream.cpp
 void	ClearInput();
@@ -43,4 +46,5 @@ void	Currency();
 
 // Loops.cpp
 void	Loops();
+void	LoopChallenge();
 #endif
