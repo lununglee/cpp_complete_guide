@@ -21,7 +21,9 @@ SRCS = Main.cpp \
 	Operators.cpp \
 	MixedExpressions.cpp \
 	Currency.cpp \
-	Loops.cpp
+	Loops.cpp \
+	Strings.cpp \
+	Sastantua.cpp
 
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 

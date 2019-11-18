@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	LoopChallenge();
+	Sastantua();
 	return (0);
 }
