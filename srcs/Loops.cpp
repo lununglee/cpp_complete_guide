@@ -141,5 +141,4 @@ void	LoopChallenge()
 				break;
 		}
 	} while (UserSelection != 'Q');
-
 }

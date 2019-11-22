@@ -23,7 +23,10 @@ SRCS = Main.cpp \
 	Currency.cpp \
 	Loops.cpp \
 	Strings.cpp \
-	Sastantua.cpp
+	Sastantua.cpp \
+	Functions.cpp \
+	Recursion.cpp \
+	Pointers.cpp
 
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 

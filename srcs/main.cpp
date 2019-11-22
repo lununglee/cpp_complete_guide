@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	Sastantua();
+	Pointers();
 	return (0);
 }
