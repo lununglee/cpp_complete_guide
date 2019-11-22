@@ -6,27 +6,34 @@ CC = g++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++17
 
 # DIRECTORIES
-SRCDIR = ./srcs/
-OBJDIR = ./objs/
-INCDIR = ./includes/
+SRCDIR = ./Srcs/
+OBJDIR = ./Objs/
+INCDIR = ./Includes/
 
 # SRCS & OBJS
 SRCS = Main.cpp \
-	IOStream.cpp \
-	Variables.cpp \
-	PrimitiveTypes.cpp \
-	SizeOfOperator.cpp \
-	Constants.cpp \
-	Arrays.cpp \
-	Operators.cpp \
-	MixedExpressions.cpp \
 	Currency.cpp \
 	Loops.cpp \
 	Strings.cpp \
 	Sastantua.cpp \
 	Functions.cpp \
 	Recursion.cpp \
-	Pointers.cpp
+	Pointers.cpp \
+	Section04.cpp \
+	Section05.cpp \
+	Section06.cpp \
+	Section07.cpp \
+	Section08.cpp \
+	Section09.cpp \
+	Section10.cpp \
+	Section11.cpp \
+	Section12.cpp \
+	Section13.cpp \
+	Section14.cpp \
+	Section15.cpp \
+	Section16.cpp \
+	Section17.cpp \
+	Section18.cpp
 
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 

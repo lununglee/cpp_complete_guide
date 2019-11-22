@@ -1,4 +1,4 @@
-#include "../includes/Header.h"
+#include "../Includes/Header.h"
 
 unsigned long long	Factorial(unsigned long long Num)
 {

@@ -1,4 +1,4 @@
-#include "../includes/Header.h"
+#include "../Includes/Header.h"
 
 void	Pointers()
 {
@@ -9,48 +9,48 @@ void	Pointers()
 
 	// for (auto Name : *StoogesPtr)
 	// 	cout << Name << endl;
-	const size_t array1_size {5};
-	const size_t array2_size {3};
+	const size_t Array01Size {5};
+	const size_t Array02Size {3};
 
-	int array1[] {1, 2, 3, 4, 5};
-	int array2[] {10, 20, 30};
+	int Array01[] {1, 2, 3, 4, 5};
+	int Array02[] {10, 20, 30};
 
 	cout << "Array 1: ";
-	print(array1, array1_size);
+	Print(Array01, Array01Size);
 	cout << "Array 2: ";
-	print(array2, array2_size);
+	Print(Array02, Array02Size);
 
-	int *results = apply_all(array1, array1_size, array2, array2_size);
-	constexpr size_t result_size {array1_size * array2_size};
+	int *Results = ApplyAll(Array01, Array01Size, Array02, Array02Size);
+	constexpr size_t ResultSize {Array01Size * Array02Size};
 
 	cout << "Result: ";
-	print(results, result_size);
+	Print(Results, ResultSize);
 	cout << endl;
 }
 
-int	*apply_all(int *array1, const size_t array1_size, int *array2, const size_t array2_size)
+int	*ApplyAll(int *Array01, const size_t Array01Size, int *Array02, const size_t Array02Size)
 {
-	int *new_array {nullptr};
-	new_array = new int[array1_size * array2_size];
-	int *return_pointer = new_array;
+	int *NewArray {nullptr};
+	NewArray = new int[Array01Size * Array02Size];
+	int *ReturnPointer = NewArray;
 	// size_t counter {0};
-	for (size_t i {0}; i < array2_size; i++)
+	for (size_t i {0}; i < Array02Size; i++)
 	{
-		for (size_t j {0}; j < array1_size; j++)
+		for (size_t j {0}; j < Array01Size; j++)
 		{
-			// *(new_array + counter) = array2[i] * array1[j];
+			// *(NewArray + counter) = Array02[i] * Array01[j];
 			// counter++;
-			*new_array++ = array2[i] * array1[j];
+			*NewArray++ = Array02[i] * Array01[j];
 		}
 	}
-	return return_pointer;
+	return ReturnPointer;
 }
 
-void	print(int *array, size_t size)
+void	Print(int *Array, size_t Size)
 {
-	for (size_t i {0}; i < size; i++)
+	for (size_t i {0}; i < Size; i++)
 	{
-		cout << array[i] << " ";
+		cout << Array[i] << " ";
 	}
 	cout << endl;
 }
@@ -102,11 +102,11 @@ void	DynamicMemoryAllocation()
 	// 	cout << str << endl;
 }
 
-int *MakeArray(size_t size, int init)
+int *MakeArray(size_t Size, int Init)
 {
-	int *array {nullptr};
-	array = new int[size];
-	for (size_t i {0}; i < size; i++)
-		*(array + i) = init;
-	return array;
+	int *Array {nullptr};
+	Array = new int[Size];
+	for (size_t i {0}; i < Size; i++)
+		*(Array + i) = Init;
+	return Array;
 }
