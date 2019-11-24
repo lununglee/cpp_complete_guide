@@ -13,8 +13,6 @@ INCDIR = ./Includes/
 # SRCS & OBJS
 SRCS = Main.cpp \
 	Sastantua.cpp \
-	Recursion.cpp \
-	Pointers.cpp \
 	Section04.cpp \
 	Section05.cpp \
 	Section06.cpp \

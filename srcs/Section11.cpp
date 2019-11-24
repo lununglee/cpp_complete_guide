@@ -98,7 +98,7 @@ void				VectorArrayChallenge()
 
 void				Factorial()
 {
-	cout << Factorial(3) << endl;
+	cout << FactorialFunction(3) << endl;
 }
 
 unsigned long long	FactorialFunction(unsigned long long Number)

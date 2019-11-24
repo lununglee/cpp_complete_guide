@@ -25,16 +25,6 @@ using std::boolalpha;
 void	Sastantua();
 void	PrintSpaces(size_t Spaces);
 
-// Recursion.cpp
-unsigned long long	Factorial(unsigned long long Num);
-
-// Pointers.cpp
-void	Pointers();
-void	DynamicMemoryAllocation();
-int		*MakeArray(size_t Size, int Init);
-int		*ApplyAll(int *Array01, const size_t Array01Size, int *Array02, const size_t Array02Size);
-void	Print(int *Array, size_t Size);
-
 /*************************************
 *            Secion04.cpp            *
 *************************************/
@@ -149,6 +139,28 @@ bool				FindHandler(const vector<int> &Numbers);
 *            Secion12.cpp            *
 *************************************/
 
+void	PointerChallenge();
+int		*ApplyAll(int *Array01, const size_t Array01Size, int *Array02, const size_t Array02Size);
+void	Print(int *Array, size_t Size);
+void	DynamicMemoryAllocation();
+int 	*MakeArray(size_t Size, int Init);
+void	SimplePointers();
+int 	*CreateArray(size_t Size, int InitValue = 0);
+void 	Display1(const int *const Array, size_t Size);
+void	ReturnPointer();
+void	References();
+void	PointerArithmetic();
+void	Swap(int *A, int *B);
+void	PassingPointers1();
+void	Display2( const vector<string> *const  Vec);
+void	Display2(int *Array, int Sentinel);
+void	PassingPointers2();
+void	Dereference();
 
+/*************************************
+*            Secion12.cpp            *
+*************************************/
+
+void	ClassSample();
 
 #endif
