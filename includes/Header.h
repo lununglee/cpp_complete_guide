@@ -21,30 +21,13 @@ using std::setprecision;
 using std::string;
 using std::boolalpha;
 
-// Currency.cpp
-void	Currency();
-// Loops.cpp
-void	Loops();
-void	LoopChallenge();
-// Strings.cpp
-void	CStrings();
-void	CppStrings();
 // Santantua.cpp
 void	Sastantua();
 void	PrintSpaces(size_t Spaces);
-// Functions.cpp
-void	Functions();
-void	SectionChallenge_11();
-void	PrintMenu();
-char	GetUserInput();
-void	PrintHandler(const vector<int> &Numbers);
-void	AddHandler(vector<int> &Numbers);
-void	MeanHandler(const vector<int> &Numbers);
-void	SmallestHandler(const vector<int> &Numbers);
-void	LargestHandler(const vector<int> &Numbers);
-bool	FindHandler(const vector<int> &Numbers);
+
 // Recursion.cpp
 unsigned long long	Factorial(unsigned long long Num);
+
 // Pointers.cpp
 void	Pointers();
 void	DynamicMemoryAllocation();
@@ -94,7 +77,78 @@ void	VectorChallenge();
 void	ArithmeticOperators();
 void	RelationalOperators();
 void	AssignmentOperators();
+void	MixedExpressions();
 void	LogicalOperators();
 void	IncreDecrementalOperators();
+void	Currency();
+void	CurrencyChallenge();
+
+/*************************************
+*            Secion09.cpp            *
+*************************************/
+
+void	WhileLoops();
+void	DoWhileLoops();
+void	ForLoops();
+void	RangeBasedForLoops();
+void	ConditionalOperators();
+void	Switch();
+void	SwitchEnum();
+void	LoopChallenge();
+void	Shipping();
+void	MultiplicationTable();
+void	If();
+void	IfElse();
+
+/*************************************
+*            Secion10.cpp            *
+*************************************/
+
+void	CStrings();
+void	CharFunctions();
+void	CppStrings();
+void	CppStringChallenge();
+
+/*************************************
+*            Secion11.cpp            *
+*************************************/
+
+void				PrintArray(const int arr[], size_t Size);
+void				SetArray(int arr[], size_t Size, int value);
+void				ArrayFunctions();
+void				VectorArrayChallenge();
+void				Factorial();
+unsigned long long	FactorialFunction(unsigned long long n);
+void				Fibonacci();
+unsigned long long	FibonacciFunction(unsigned long long n);
+double				CalcCost(double BaseCost = 100, double TaxRate = 0.06, double Shipping = 4.25);
+void				Greeting(string Name,  string Prefix = "Mr. ", string Suffix = " ");
+void				DefaultArgument();
+void				OverloadPrint(int Num);
+void				OverloadPrint(double Num);
+void				OverloadPrint(string Str);
+void				OverloadPrint(string Str, string T);
+void				OverloadPrint(vector<string> Vec);
+void				FunctionOverloading();
+void				PassByReference();
+void				PassByRef1(int &Num);
+void				PassByRef2(string &Str);
+void				PassByRef3(vector<string> &Vec);
+void				PrintVector(const vector<string> &Vec);
+void				PassByReference();
+void				PrintMenu();
+char				GetUserInput();
+void				PrintHandler(const vector<int> &Numbers);
+void				AddHandler(vector<int> &Numbers);
+void				MeanHandler(const vector<int> &Numbers);
+void				SmallestHandler(const vector<int> &Numbers);
+void				LargestHandler(const vector<int> &Numbers);
+bool				FindHandler(const vector<int> &Numbers);
+
+/*************************************
+*            Secion12.cpp            *
+*************************************/
+
+
 
 #endif
