@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	ClassSample();
+	ClassDeclaration();
 	return (0);
 }

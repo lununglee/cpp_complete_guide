@@ -161,6 +161,6 @@ void	Dereference();
 *            Secion12.cpp            *
 *************************************/
 
-void	ClassSample();
+void	ClassDeclaration();
 
 #endif

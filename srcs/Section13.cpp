@@ -21,7 +21,7 @@ class	Account
 	bool	Withdraw(double);
 };
 
-void	ClassSample()
+void	ClassDeclaration()
 {
 	// Stack
 	Player Player01;
