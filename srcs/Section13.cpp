@@ -100,5 +100,11 @@ void	ConsDestructor()
 
 void	ConstructorInitializationLists()
 {
-	
+	Player	Empty;
+	Player	Frank {"Frank"};
+	Player	Villain {"Villain", 100, 55};
+	cout << Empty.GetHealth() << endl;
+	cout << Empty.GetName() << endl;
+
+	cout << Frank.GetName() << endl;
 }
