@@ -27,7 +27,7 @@ Player::Player(const Player &Source)
 // 	Health {Source.Health},
 // 	XP {Source.XP}
 :	Player {Source.Name, Source.Health, Source.XP}
-{ cout << "copy of " << Source.Name << " has been made" << endl;}
+{ cout << "copy of " << Source.Name << " has been made" << endl; }
 
 /*********************************
 *           Destructors          *

@@ -123,3 +123,39 @@ void	DisplayPlayer(Player Source)
 	cout << "Health: " << Source.GetHealth() << endl;
 	cout << "XP: " << Source.GetXP()<< endl;
 }
+
+void	ShallowCopy()
+{
+	Shallow Obj1 {100};
+	DisplayShallow(Obj1);
+
+	Shallow Obj2 {Obj1};
+	Obj2.SetData(1000);
+	DisplayShallow(Obj1);
+}
+
+void	DisplayShallow(Shallow Source)
+{
+	int	Address {Source.GetData()};
+	cout << Source.GetData() << endl;
+	cout << &Address << endl;
+}
+
+void	DeepCopy()
+{
+	Deep Obj1 {100};
+	DisplayDeep(Obj1);
+
+	Deep Obj2 {Obj1};
+	Obj2.SetData(1000);
+	DisplayDeep(Obj2);
+	DisplayDeep(Obj1);
+	DisplayDeep(Obj2);
+}
+
+void	DisplayDeep(Deep Source)
+{
+	int	Address = Source.GetData();
+	cout << Source.GetData() << endl;
+	cout << &Address << endl;
+}

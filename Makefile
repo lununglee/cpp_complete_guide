@@ -14,6 +14,8 @@ INCDIR = ./Includes/
 SRCS = Main.cpp \
 	Account.cpp \
 	Player.cpp \
+	Shallow.cpp \
+	Deep.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \

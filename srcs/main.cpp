@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	CopyConstructor();
+	DeepCopy();
 	return (0);
 }

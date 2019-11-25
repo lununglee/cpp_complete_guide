@@ -3,7 +3,7 @@
 
 #include "Header.h"
 
-class Player
+class	Player
 {
 private:
 	string	Name;

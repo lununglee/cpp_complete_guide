@@ -15,14 +15,16 @@
 using std::cout;
 using std::cin;
 using std::endl;
+using std::string;
 using std::vector;
 using std::fixed;
 using std::setprecision;
-using std::string;
 using std::boolalpha;
 
-#include "./Player.h"
-#include "./Account.h"
+#include "../Includes/Player.h"
+#include "../Includes/Account.h"
+#include "../Includes/Shallow.h"
+#include "../Includes/Deep.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -170,5 +172,9 @@ void	ConsDestructor();
 void	ConstructorInitializationLists();
 void	CopyConstructor();
 void	DisplayPlayer(Player Source);
+void	ShallowCopy();
+void	DisplayShallow(Shallow Source);
+void	DeepCopy();
+void	DisplayDeep(Deep Source);
 
 #endif
