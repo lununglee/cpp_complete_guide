@@ -21,8 +21,8 @@ using std::setprecision;
 using std::string;
 using std::boolalpha;
 
-#include "Account.h"
-#include "Player.h"
+#include "./Player.h"
+#include "./Account.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -161,12 +161,14 @@ void	PassingPointers2();
 void	Dereference();
 
 /*************************************
-*            Secion12.cpp            *
+*            Secion13.cpp            *
 *************************************/
 
 void	ClassDeclaration();
 void	MethodImplementation1();
 void	ConsDestructor();
 void	ConstructorInitializationLists();
+void	CopyConstructor();
+void	DisplayPlayer(Player Source);
 
 #endif

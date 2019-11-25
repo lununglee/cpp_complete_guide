@@ -108,3 +108,18 @@ void	ConstructorInitializationLists()
 
 	cout << Frank.GetName() << endl;
 }
+
+void	CopyConstructor()
+{
+	Player	Empty;
+	Player	Frank {"Frank"};
+	Player	Villain {"Villain", 100, 55};
+	DisplayPlayer(Empty);
+}
+
+void	DisplayPlayer(Player Source)
+{
+	cout << "Name: " << Source.GetName() << endl;
+	cout << "Health: " << Source.GetHealth() << endl;
+	cout << "XP: " << Source.GetXP()<< endl;
+}

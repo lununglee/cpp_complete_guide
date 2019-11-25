@@ -3,9 +3,6 @@
 /*********************************
 *          Constructors          *
 *********************************/
-Player::Player(string NameToSet, int HealthToSet, int XPToSet)
-: Name {NameToSet}, Health {HealthToSet}, XP {XPToSet}
-{ }
 
 Player::Player()
 : Player {"None", 100, 0}
@@ -14,6 +11,30 @@ Player::Player()
 Player::Player(string NameToSet)
 : Player {NameToSet, 100, 0}
 { }
+
+Player::Player(string NameToSet, int HealthToSet, int XPToSet)
+:	Name {NameToSet},
+	Health {HealthToSet},
+	XP {XPToSet}
+{ }
+
+/*********************************
+*            Copier              *
+*********************************/
+
+Player::Player(const Player &Source)
+// :	Name {Source.Name},
+// 	Health {Source.Health},
+// 	XP {Source.XP}
+:	Player {Source.Name, Source.Health, Source.XP}
+{ cout << "copy of " << Source.Name << " has been made" << endl;}
+
+/*********************************
+*           Destructors          *
+*********************************/
+
+Player::~Player()
+{ cout << "Destructor in action..." << endl; }
 
 /*********************************
 *            Setters             *

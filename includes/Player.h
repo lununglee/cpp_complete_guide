@@ -12,9 +12,15 @@ private:
 
 public:
 	// Constructors
-	Player(string NameToSet, int HealthToSet, int XPToSet);
 	Player();
 	Player(string NameToSet);
+	Player(string NameToSet, int HealthToSet, int XPToSet);
+	// Copier
+	Player(const Player &Source);
+
+	// Destructor
+	~Player();
+
 
 	// Setters
 	void	SetName(string NameToSet);

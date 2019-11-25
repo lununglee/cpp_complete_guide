@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	ConstructorInitializationLists();
+	CopyConstructor();
 	return (0);
 }

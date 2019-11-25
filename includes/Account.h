@@ -11,10 +11,10 @@ class	Account
 
 	public:
 	// Constructors
-	Account(double BalanceToSet, string NameToSet);
 	Account();
 	Account(double BalanceToSet);
 	Account(string NameToSet);
+	Account(double BalanceToSet, string NameToSet);
 
 	// Getters
 	double	GetBalance();

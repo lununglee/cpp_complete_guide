@@ -3,9 +3,6 @@
 /*********************************
 *          Constructors          *
 *********************************/
-Account::Account(double BalanceToSet, string NameToSet)
-: Balance {BalanceToSet}, Name {NameToSet}
-{ }
 
 Account::Account()
 : Account {0, "User"}
@@ -17,6 +14,11 @@ Account::Account(double BalanceToSet)
 
 Account::Account(string NameToSet)
 : Account {0, NameToSet}
+{ }
+
+Account::Account(double BalanceToSet, string NameToSet)
+:	Balance {BalanceToSet},
+	Name {NameToSet}
 { }
 
 /*********************************
