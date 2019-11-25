@@ -12,6 +12,8 @@ INCDIR = ./Includes/
 
 # SRCS & OBJS
 SRCS = Main.cpp \
+	Account.cpp \
+	Player.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \

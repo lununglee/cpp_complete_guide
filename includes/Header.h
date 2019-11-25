@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _HEADER_H_
+#define _HEADER_H_
 
 #include <iostream>
 #include <climits>
@@ -20,6 +20,9 @@ using std::fixed;
 using std::setprecision;
 using std::string;
 using std::boolalpha;
+
+#include "Account.h"
+#include "Player.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -162,5 +165,8 @@ void	Dereference();
 *************************************/
 
 void	ClassDeclaration();
+void	MethodImplementation1();
+void	ConsDestructor();
+void	ConstructorInitializationLists();
 
 #endif

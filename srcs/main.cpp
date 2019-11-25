@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	ClassDeclaration();
+	ConstructorInitializationLists();
 	return (0);
 }

@@ -1,9 +1,9 @@
 #include "../Includes/Header.h"
 
-class	Player
+class	PlayerPublic
 {
 	public:
-	string	Name {"Player"};
+	string	Name {"PlayerPublic"};
 	int		Health {100};
 	int		XP {0};
 
@@ -11,7 +11,29 @@ class	Player
 	bool	bIsDead();
 };
 
-class	Account
+class	PlayerPrivate
+{
+	private:
+	string	Name {"PlayerPrivate"};
+	int		Health {100};
+	int		XP {0};
+
+	public:
+	void	Talk(string);
+	bool	bIsDead();
+};
+
+class	AccountPublic
+{
+	public:
+	string	Name {"DefaultUser"};
+	double	Balance {0.0};
+
+	bool	Deposit(double);
+	bool	Withdraw(double);
+};
+
+class	AccountPrivate
 {
 	public:
 	string	Name {"DefaultUser"};
@@ -24,26 +46,59 @@ class	Account
 void	ClassDeclaration()
 {
 	// Stack
-	Player Player01;
-	Player Player02;
+	PlayerPublic Player01;
+	PlayerPublic Player02;
 
 	// Heap
-	Player *AI = new Player;
+	PlayerPublic *AI = new PlayerPublic;
 	delete AI;
 
 	// Array
-	Player Players[] {Player01, Player02};
+	PlayerPublic Players[] {Player01, Player02};
 
 	// Vectors
-	vector<Player> PlayerVec {Player01};
+	vector<PlayerPublic> PlayerVec {Player01};
 	PlayerVec.push_back(Player02);
 
 	// Stack
-	Account	FrankAccount;
-	Account	JimAccount;
+	AccountPublic	FrankAccount;
+	AccountPublic	JimAccount;
 
 	Player01.Name = "Frank";
 	cout << Player01.Name << endl;
 	AI->Name = "Comp\n";
 	cout << AI->Name;
+}
+
+void	MethodImplementation1()
+{
+	Account FrankAccount;
+	FrankAccount.SetName("Frank Sinatra");
+	FrankAccount.SetBalance(1000.0);
+
+	if (FrankAccount.Deposit(200))
+		cout << "Deposit successful" << endl;
+	else
+		cout << "Deposit failed" << endl;
+
+	if (FrankAccount.Withdraw(500))
+		cout << "Withdrawal successful" << endl;
+	else
+		cout << "Withdrawal failed - insufficient funds" << endl;
+
+	if (FrankAccount.Withdraw(1500))
+		cout << "Withdrawal successful" << endl;
+	else
+		cout << "Withdrawal failed - insufficient funds" << endl;
+}
+
+void	ConsDestructor()
+{
+	Player Slayer("Slayer");
+	cout << Slayer.GetName();
+}
+
+void	ConstructorInitializationLists()
+{
+	
 }
