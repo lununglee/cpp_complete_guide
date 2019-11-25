@@ -1,19 +1,23 @@
 #include "../Includes/Player.h"
 
-// Constructor
-Player::Player()
-: Name {"User"}, Health {100}, XP {0}
-{ }
-
-Player::Player(string NameToSet)
-: Name {NameToSet}, Health {100}, XP {0}
-{ }
-
+/*********************************
+*          Constructors          *
+*********************************/
 Player::Player(string NameToSet, int HealthToSet, int XPToSet)
 : Name {NameToSet}, Health {HealthToSet}, XP {XPToSet}
 { }
 
-// Setter
+Player::Player()
+: Player {"None", 100, 0}
+{ }
+
+Player::Player(string NameToSet)
+: Player {NameToSet, 100, 0}
+{ }
+
+/*********************************
+*            Setters             *
+*********************************/
 void	Player::SetName(string NameToSet)
 {
 	Name = NameToSet;
@@ -27,7 +31,9 @@ void	Player::SetXP(int XPToSet)
 	XP = XPToSet;
 }
 
-// Getter
+/*********************************
+*            Getters             *
+*********************************/
 string	Player::GetName()
 {
 	return Name;

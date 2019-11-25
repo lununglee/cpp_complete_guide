@@ -3,20 +3,20 @@
 /*********************************
 *          Constructors          *
 *********************************/
+Account::Account(double BalanceToSet, string NameToSet)
+: Balance {BalanceToSet}, Name {NameToSet}
+{ }
+
 Account::Account()
-: Balance {0}, Name {"User"}
+: Account {0, "User"}
 { }
 
 Account::Account(double BalanceToSet)
-: Balance {BalanceToSet}, Name {"User"}
+: Account {BalanceToSet, "User"}
 { }
 
 Account::Account(string NameToSet)
-: Balance {0}, Name {NameToSet}
-{ }
-
-Account::Account(double BalanceToSet, string NameToSet)
-: Balance {BalanceToSet}, Name {NameToSet}
+: Account {0, NameToSet}
 { }
 
 /*********************************
