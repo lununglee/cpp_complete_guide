@@ -4,25 +4,20 @@
 *          Constructors          *
 *********************************/
 Account::Account()
-{
-	Balance = 0;
-	Name = "User";
-}
+: Balance {0}, Name {"User"}
+{ }
+
 Account::Account(double BalanceToSet)
-{
-	Balance = BalanceToSet;
-	Name = "User";
-}
+: Balance {BalanceToSet}, Name {"User"}
+{ }
+
 Account::Account(string NameToSet)
-{
-	Balance = 0;
-	Name = NameToSet;
-}
+: Balance {0}, Name {NameToSet}
+{ }
+
 Account::Account(double BalanceToSet, string NameToSet)
-{
-	Balance = BalanceToSet;
-	Name = NameToSet;
-}
+: Balance {BalanceToSet}, Name {NameToSet}
+{ }
 
 /*********************************
 *            Setters             *

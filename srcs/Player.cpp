@@ -2,25 +2,16 @@
 
 // Constructor
 Player::Player()
-{
-	Name = "User";
-	Health = 100;
-	XP = 0;
-}
+: Name {"User"}, Health {100}, XP {0}
+{ }
 
 Player::Player(string NameToSet)
-{
-	Name = NameToSet;
-	Health = 100;
-	XP = 0;
-}
+: Name {NameToSet}, Health {100}, XP {0}
+{ }
 
 Player::Player(string NameToSet, int HealthToSet, int XPToSet)
-{
-	Name = NameToSet;
-	Health = HealthToSet;
-	XP = XPToSet;
-}
+: Name {NameToSet}, Health {HealthToSet}, XP {XPToSet}
+{ }
 
 // Setter
 void	Player::SetName(string NameToSet)
