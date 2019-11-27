@@ -25,6 +25,7 @@ using std::boolalpha;
 #include "../Includes/Account.h"
 #include "../Includes/Shallow.h"
 #include "../Includes/Deep.h"
+#include "../Includes/Move.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -176,5 +177,8 @@ void	ShallowCopy();
 void	DisplayShallow(Shallow Source);
 void	DeepCopy();
 void	DisplayDeep(Deep Source);
+void	MoveConstructor();
+void	ConstObject();
+void	StaticClass();
 
 #endif

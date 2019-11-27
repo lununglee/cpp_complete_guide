@@ -159,3 +159,30 @@ void	DisplayDeep(Deep Source)
 	cout << Source.GetData() << endl;
 	cout << &Address << endl;
 }
+
+void	MoveConstructor()
+{
+	vector<Move> Vec;
+
+	Vec.push_back(Move{10});
+	Vec.push_back(Move{20});
+	Vec.push_back(Move{30});
+	Vec.push_back(Move{40});
+	Vec.push_back(Move{50});
+	Vec.push_back(Move{60});
+	Vec.push_back(Move{70});
+	Vec.push_back(Move{80});
+}
+
+void	ConstObject()
+{
+	const Player	Vallain {"Villain", 100, 0};
+	cout << Vallain.GetHealth() << endl;
+}
+
+void	StaticClass()
+{
+	cout << Player::GetPlayerCount() << endl;
+	Player	Player1;
+	cout << Player::GetPlayerCount() << endl;
+}

@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	DeepCopy();
-	return (0);
+	StaticClass();
+	return 0;
 }

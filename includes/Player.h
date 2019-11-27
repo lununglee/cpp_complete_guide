@@ -6,9 +6,10 @@
 class	Player
 {
 private:
-	string	Name;
-	int		Health;
-	int		XP;
+	static int	PlayerCount;
+	string		Name;
+	int			Health;
+	int			XP;
 
 public:
 	// Constructors
@@ -23,14 +24,15 @@ public:
 
 
 	// Setters
-	void	SetName(string NameToSet);
-	void	SetHealth(int HealthToSet);
-	void	SetXP(int XPToSet);
+	void		SetName(string NameToSet);
+	void		SetHealth(int HealthToSet);
+	void		SetXP(int XPToSet);
 
 	// Getters
-	string	GetName();
-	int		GetHealth();
-	int		GetXP();
+	string		GetName() const;
+	int			GetHealth() const;
+	int			GetXP() const;
+	static int	GetPlayerCount();
 };
 
 #endif

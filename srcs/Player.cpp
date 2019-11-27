@@ -1,5 +1,7 @@
 #include "../Includes/Player.h"
 
+int 	Player::PlayerCount {0};
+
 /*********************************
 *          Constructors          *
 *********************************/
@@ -16,7 +18,7 @@ Player::Player(string NameToSet, int HealthToSet, int XPToSet)
 :	Name {NameToSet},
 	Health {HealthToSet},
 	XP {XPToSet}
-{ }
+{ PlayerCount++; }
 
 /*********************************
 *            Copier              *
@@ -27,14 +29,14 @@ Player::Player(const Player &Source)
 // 	Health {Source.Health},
 // 	XP {Source.XP}
 :	Player {Source.Name, Source.Health, Source.XP}
-{ cout << "copy of " << Source.Name << " has been made" << endl; }
+{ }
 
 /*********************************
 *           Destructors          *
 *********************************/
 
 Player::~Player()
-{ cout << "Destructor in action..." << endl; }
+{ PlayerCount--; }
 
 /*********************************
 *            Setters             *
@@ -55,15 +57,20 @@ void	Player::SetXP(int XPToSet)
 /*********************************
 *            Getters             *
 *********************************/
-string	Player::GetName()
+string	Player::GetName() const
 {
 	return Name;
 }
-int		Player::GetHealth()
+int		Player::GetHealth() const
 {
 	return Health;
 }
-int		Player::GetXP()
+int		Player::GetXP() const
 {
 	return XP;
+}
+
+int		Player::GetPlayerCount()
+{
+	return PlayerCount;
 }

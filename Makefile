@@ -2,7 +2,7 @@
 NAME = Main
 
 # COMPILER
-CC = g++
+CC = clang++
 CFLAGS = -Wall -Wextra -Werror -g -std=c++17
 
 # DIRECTORIES
@@ -16,6 +16,7 @@ SRCS = Main.cpp \
 	Player.cpp \
 	Shallow.cpp \
 	Deep.cpp \
+	Move.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \
