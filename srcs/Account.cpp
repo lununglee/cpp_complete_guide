@@ -25,6 +25,11 @@ Account::Account(double BalanceToSet, string NameToSet)
 *            Setters             *
 *********************************/
 
+void	Account::SetBalance(double BalanceToSet)
+{
+	Balance = BalanceToSet;
+}
+
 void	Account::SetName(string NameToSet)
 {
 	Name = NameToSet;

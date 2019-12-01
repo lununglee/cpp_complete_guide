@@ -27,6 +27,7 @@ using std::istream;
 
 #include "../Includes/Player.h"
 #include "../Includes/Account.h"
+#include "../Includes/AccountInherit.h"
 #include "../Includes/Shallow.h"
 #include "../Includes/Deep.h"
 #include "../Includes/Move.h"
@@ -35,7 +36,7 @@ using std::istream;
 #include "../Includes/MyString.h"
 #include "../Includes/MSC.h"
 #include "../Includes/MSCNonMember.h"
-#include "../Includes/SavingsAccount.h"
+#include "../Includes/SavingsAccountInherit.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -209,5 +210,7 @@ void	OverloadingOperatorChallenge();
 /*************************************
 *            Secion15.cpp            *
 *************************************/
+
+void	ClassInheritance();
 
 #endif

@@ -21,6 +21,7 @@ class	Account
 	string	GetName();
 
 	// Setters
+	void	SetBalance(double BalanceToSet);
 	void	SetName(string Name);
 	bool	Deposit(double DepositAmount);
 	bool	Withdraw(double WithdrawAmount);

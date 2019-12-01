@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	OverloadingOperatorChallenge();
+	ClassInheritance();
 	return 0;
 }
