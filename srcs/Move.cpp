@@ -1,6 +1,9 @@
 #include "../Includes/Move.h"
 
-// Constructor
+/*********************************
+*          Constructors          *
+*********************************/
+
 Move::Move()
 : Move {0}
 { }
@@ -11,29 +14,44 @@ Move::Move(int DataToSet)
 	*Data = DataToSet;
 }
 
-// Copier
+/*********************************
+*             Copier             *
+*********************************/
+
 Move::Move(const Move &Source)
 : Move {*Source.Data}
 { }
 
-// Mover
+/*********************************
+*             Mover              *
+*********************************/
+
 Move::Move(Move &&Source) noexcept
 : Data {Source.Data}
 {
 	Source.Data = nullptr;
 }
 
-// Destructor
+/*********************************
+*           Destructors          *
+*********************************/
+
 Move::~Move()
 { }
 
-// Setters
+/*********************************
+*            Setters             *
+*********************************/
+
 void	Move::SetData(int DataToSet)
 {
 	*Data = DataToSet;
 }
 
-// Getters
+/*********************************
+*            Getters             *
+*********************************/
+
 int		Move::GetData()
 {
 	return *Data;

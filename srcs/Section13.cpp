@@ -186,3 +186,8 @@ void	StaticClass()
 	Player	Player1;
 	cout << Player::GetPlayerCount() << endl;
 }
+
+void	ClassChallenge()
+{
+	// Movies MovieList;
+}

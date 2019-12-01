@@ -1,9 +1,9 @@
-#ifndef _ACCOUNT_H_
-#define _ACCOUNT_H_
+#ifndef _SAVINGS_ACCOUNT_H_
+#define _SAVINGS_ACCOUNT_H_
 
 #include "Header.h"
 
-class	Account
+class SavingsAccount : public Account
 {
 	private:
 	double	Balance;
@@ -11,10 +11,10 @@ class	Account
 
 	public:
 	// Constructors
-	Account();
-	Account(double BalanceToSet);
-	Account(string NameToSet);
-	Account(double BalanceToSet, string NameToSet);
+	SavingsAccount();
+	SavingsAccount(double BalanceToSet);
+	SavingsAccount(string NameToSet);
+	SavingsAccount(double BalanceToSet, string NameToSet);
 
 	// Getters
 	double	GetBalance();

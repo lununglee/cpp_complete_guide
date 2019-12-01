@@ -1,22 +1,22 @@
-#include "../Includes/Account.h"
+#include "../Includes/SavingsAccount.h"
 
 /*********************************
 *          Constructors          *
 *********************************/
 
-Account::Account()
-: Account {0, "User"}
+SavingsAccount::SavingsAccount()
+: SavingsAccount {0, "User"}
 { }
 
-Account::Account(double BalanceToSet)
-: Account {BalanceToSet, "User"}
+SavingsAccount::SavingsAccount(double BalanceToSet)
+: SavingsAccount {BalanceToSet, "User"}
 { }
 
-Account::Account(string NameToSet)
-: Account {0, NameToSet}
+SavingsAccount::SavingsAccount(string NameToSet)
+: SavingsAccount {0, NameToSet}
 { }
 
-Account::Account(double BalanceToSet, string NameToSet)
+SavingsAccount::SavingsAccount(double BalanceToSet, string NameToSet)
 :	Balance {BalanceToSet},
 	Name {NameToSet}
 { }
@@ -25,16 +25,16 @@ Account::Account(double BalanceToSet, string NameToSet)
 *            Setters             *
 *********************************/
 
-void	Account::SetName(string NameToSet)
+void	SavingsAccount::SetName(string NameToSet)
 {
 	Name = NameToSet;
 }
-bool	Account::Deposit(double DepositAmount)
+bool	SavingsAccount::Deposit(double DepositAmount)
 {
 	Balance += DepositAmount;
 	return true;
 }
-bool	Account::Withdraw(double WithdrawAmount)
+bool	SavingsAccount::Withdraw(double WithdrawAmount)
 {
 	if (Balance - WithdrawAmount >= 0)
 	{
@@ -48,12 +48,12 @@ bool	Account::Withdraw(double WithdrawAmount)
 /*********************************
 *            Getters             *
 *********************************/
-double	Account::GetBalance()
+double	SavingsAccount::GetBalance()
 {
 	return Balance;
 }
 
-string	Account::GetName()
+string	SavingsAccount::GetName()
 {
 	return Name;
 }

@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	StaticClass();
+	OverloadingOperatorChallenge();
 	return 0;
 }

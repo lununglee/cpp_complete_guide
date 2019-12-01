@@ -1,6 +1,9 @@
 #include "../Includes/Deep.h"
 
-// Constructors
+/*********************************
+*          Constructors          *
+*********************************/
+
 Deep::Deep()
 : Deep {0}
 { }
@@ -11,7 +14,10 @@ Deep::Deep(int DataToSet)
 	*Data = DataToSet;
 }
 
-// Copier
+/*********************************
+*             Copier             *
+*********************************/
+
 Deep::Deep(const Deep &Source)
 : Deep {*Source.Data}
 {
@@ -19,20 +25,29 @@ Deep::Deep(const Deep &Source)
 	*Data = *Source.Data;
 }
 
-// Destructor
+/*********************************
+*           Destructors          *
+*********************************/
+
 Deep::~Deep()
 {
 	delete Data;
 	std::cout << "Destructor in action" << std::endl;
 }
 
-// Getters
+/*********************************
+*            Getters             *
+*********************************/
+
 int		Deep::GetData()
 {
 	return *Data;
 }
 
-// Setters
+/*********************************
+*            Setters             *
+*********************************/
+
 void	Deep::SetData(int DataToSet)
 {
 	*Data = DataToSet;

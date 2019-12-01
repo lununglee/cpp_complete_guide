@@ -17,6 +17,12 @@ SRCS = Main.cpp \
 	Shallow.cpp \
 	Deep.cpp \
 	Move.cpp \
+	Movie.cpp \
+	Movies.cpp \
+	MyString.cpp \
+	MSC.cpp \
+	MSCNonMember.cpp \
+	SavingsAccount.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \

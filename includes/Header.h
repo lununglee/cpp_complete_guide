@@ -20,12 +20,22 @@ using std::vector;
 using std::fixed;
 using std::setprecision;
 using std::boolalpha;
+using std::strlen;
+using std::strcpy;
+using std::ostream;
+using std::istream;
 
 #include "../Includes/Player.h"
 #include "../Includes/Account.h"
 #include "../Includes/Shallow.h"
 #include "../Includes/Deep.h"
 #include "../Includes/Move.h"
+#include "../Includes/Movie.h"
+#include "../Includes/Movies.h"
+#include "../Includes/MyString.h"
+#include "../Includes/MSC.h"
+#include "../Includes/MSCNonMember.h"
+#include "../Includes/SavingsAccount.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -180,5 +190,24 @@ void	DisplayDeep(Deep Source);
 void	MoveConstructor();
 void	ConstObject();
 void	StaticClass();
+void	ClassChallenge();
+
+/*************************************
+*            Secion14.cpp            *
+*************************************/
+
+void	OverloadingOperator();
+void	OverloadingOperatorCopy();
+void	OverloadingOperatorMove();
+void	OverloadingOperatorUnary();
+void	OverloadingOperatorBinary();
+void	OverloadingOperatorConcatenate();
+void	OverloadingOperatorGlobal();
+void	OverloadingOperatorStream();
+void	OverloadingOperatorChallenge();
+
+/*************************************
+*            Secion15.cpp            *
+*************************************/
 
 #endif
