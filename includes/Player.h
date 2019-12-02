@@ -1,21 +1,21 @@
 #ifndef _PLAYER_H_
 #define _PLAYER_H_
 
-#include "Header.h"
+#include <string>
 
 class	Player
 {
 private:
 	static int	PlayerCount;
-	string		Name;
+	std::string		Name;
 	int			Health;
 	int			XP;
 
 public:
 	// Constructors
 	Player();
-	Player(string NameToSet);
-	Player(string NameToSet, int HealthToSet, int XPToSet);
+	Player(std::string NameToSet);
+	Player(std::string NameToSet, int HealthToSet, int XPToSet);
 	// Copier
 	Player(const Player &Source);
 
@@ -24,12 +24,12 @@ public:
 
 
 	// Setters
-	void		SetName(string NameToSet);
+	void		SetName(std::string NameToSet);
 	void		SetHealth(int HealthToSet);
 	void		SetXP(int XPToSet);
 
 	// Getters
-	string		GetName() const;
+	std::string		GetName() const;
 	int			GetHealth() const;
 	int			GetXP() const;
 	static int	GetPlayerCount();

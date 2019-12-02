@@ -1,7 +1,7 @@
 #ifndef _SHALLOW_H_
 #define _SHALLOW_H_
 
-#include "Header.h"
+#include <iostream>
 
 class Shallow
 {

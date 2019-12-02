@@ -1,7 +1,9 @@
 #ifndef _MOVIE_H_
 #define _MOVIE_H_
 
-#include "Header.h"
+#include <string>
+
+using std::string;
 
 class Movie
 {

@@ -1,7 +1,9 @@
 #ifndef _ACCOUNT_H_
 #define _ACCOUNT_H_
 
-#include "Header.h"
+#include <string>
+
+using std::string;
 
 class	Account
 {

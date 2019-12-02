@@ -1,7 +1,7 @@
 #ifndef _SAVINGS_ACCOUNT_INHERI_H_
 #define _SAVINGS_ACCOUNT_INHERI_H_
 
-#include "Header.h"
+#include "AccountInherit.h"
 
 class SavingsAccountInherit : public AccountInherit
 {

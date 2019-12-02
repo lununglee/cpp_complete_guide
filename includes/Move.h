@@ -1,8 +1,6 @@
 #ifndef _MOVE_H_
 #define _MOVE_H_
 
-#include "Header.h"
-
 class Move
 {
 	private:

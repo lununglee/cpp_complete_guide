@@ -1,7 +1,11 @@
 #ifndef _MYSTRING_H_
 #define _MYSTRING_H_
 
-#include "Header.h"
+#include <iostream>
+using std::cout;
+using std::endl;
+using std::ostream;
+using std::istream;
 
 class MyString
 {

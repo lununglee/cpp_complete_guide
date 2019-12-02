@@ -1,8 +1,6 @@
 // #ifndef _MSCHALLENGE_H_
 // #define _MSCHALLENGE_H_
 
-// #include "Header.h"
-
 // class MSCNonMember
 // {
 // 	private:

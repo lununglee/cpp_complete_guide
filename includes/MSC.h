@@ -1,7 +1,14 @@
 #ifndef _MSCHALLENGE_H_
 #define _MSCHALLENGE_H_
 
-#include "Header.h"
+#include <iostream>
+#include <cstring>
+#include <cctype>
+
+using std::cout;
+using std::endl;
+using std::istream;
+using std::ostream;
 
 class MSC
 {

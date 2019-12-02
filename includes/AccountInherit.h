@@ -1,8 +1,6 @@
 #ifndef _ACCOUNT_INHERI_H_
 #define _ACCOUNT_INHERI_H_
 
-#include "Header.h"
-
 class AccountInherit
 {
 	public:

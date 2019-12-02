@@ -10,11 +10,11 @@ Player::Player()
 : Player {"None", 100, 0}
 { }
 
-Player::Player(string NameToSet)
+Player::Player(std::string NameToSet)
 : Player {NameToSet, 100, 0}
 { }
 
-Player::Player(string NameToSet, int HealthToSet, int XPToSet)
+Player::Player(std::string NameToSet, int HealthToSet, int XPToSet)
 :	Name {NameToSet},
 	Health {HealthToSet},
 	XP {XPToSet}
@@ -41,7 +41,7 @@ Player::~Player()
 /*********************************
 *            Setters             *
 *********************************/
-void	Player::SetName(string NameToSet)
+void	Player::SetName(std::string NameToSet)
 {
 	Name = NameToSet;
 }
@@ -57,7 +57,7 @@ void	Player::SetXP(int XPToSet)
 /*********************************
 *            Getters             *
 *********************************/
-string	Player::GetName() const
+std::string	Player::GetName() const
 {
 	return Name;
 }
