@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	ClassInheritance();
+	InheritanceChallenge();
 	return 0;
 }

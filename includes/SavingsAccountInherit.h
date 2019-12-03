@@ -5,11 +5,20 @@
 
 class SavingsAccountInherit : public AccountInherit
 {
+	friend	ostream &operator<<(ostream &OS, const SavingsAccountInherit &Source);
+
+	private:
+	static constexpr const char	*DefaultName {"Unnamed Account"};
+	static constexpr double		DefaultBalance {0.0};
+	static constexpr double		DefaultInterestRate {0.0};
+
+	protected:
+	double	InterestRate;
+
 	public:
-	SavingsAccountInherit();
+	SavingsAccountInherit(string Name = DefaultName, double BalanceToSet = DefaultBalance, double InterestRateToSet = DefaultInterestRate);
 	~SavingsAccountInherit();
-	void	Deposit(double DepositAmount);
-	void	Withdraw(double WithdrawAmount);
+	bool						Deposit(double DepositAmount);
 };
 
 #endif

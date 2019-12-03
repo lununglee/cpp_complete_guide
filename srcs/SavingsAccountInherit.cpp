@@ -2,15 +2,38 @@
 
 #include <iostream>
 
-SavingsAccountInherit::SavingsAccountInherit()
+/*********************************
+*            Ostream             *
+*********************************/
+
+ostream		&operator<<(ostream &OS, const SavingsAccountInherit &Source)
+{
+	OS << "[SavingsAccount: " << Source.Name << " -> " << Source.Balance << "with: " << Source.InterestRate << "% interest" << "]" << endl;
+	return OS;
+}
+
+/*********************************
+*          Constructors          *
+*********************************/
+
+SavingsAccountInherit::SavingsAccountInherit(string NameToSet, double BalanceToSet, double InterestRateToSet)
+: AccountInherit {NameToSet, BalanceToSet}, InterestRate {InterestRateToSet}
 { }
+
+/*********************************
+*          Destructors           *
+*********************************/
+
 SavingsAccountInherit::~SavingsAccountInherit()
 { }
-void	SavingsAccountInherit::Deposit(double DepositAmount)
+
+/*********************************
+*            Setters             *
+*********************************/
+
+bool	SavingsAccountInherit::Deposit(double DepositAmount)
 {
-	std::cout << "Savings Account Deposit: " << DepositAmount << std::endl;
-}
-void	SavingsAccountInherit::Withdraw(double WithdrawAmount)
-{
-	std::cout << "Savings Account Deposit: " << WithdrawAmount << std::endl;
+	// std::cout << "Savings Account Deposit: " << DepositAmount << std::endl;
+	DepositAmount += (DepositAmount * (InterestRate / 100));
+	return AccountInherit::Deposit(DepositAmount);
 }

@@ -24,6 +24,9 @@ SRCS = Main.cpp \
 	MSCNonMember.cpp \
 	AccountInherit.cpp \
 	SavingsAccountInherit.cpp \
+	AccountUtil.cpp \
+	Base.cpp \
+	Derived.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \

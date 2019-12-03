@@ -37,6 +37,9 @@ using std::istream;
 #include "../Includes/MSC.h"
 #include "../Includes/MSCNonMember.h"
 #include "../Includes/SavingsAccountInherit.h"
+#include "../Includes/Base.h"
+#include "../Includes/Derived.h"
+#include "../Includes/AccountUtil.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -212,5 +215,8 @@ void	OverloadingOperatorChallenge();
 *************************************/
 
 void	ClassInheritance();
+void	ClassProtected();
+void	ClassRedefine();
+void	InheritanceChallenge();
 
 #endif
