@@ -25,21 +25,23 @@ using std::strcpy;
 using std::ostream;
 using std::istream;
 
-#include "../Includes/Player.h"
-#include "../Includes/Account.h"
-#include "../Includes/AccountInherit.h"
-#include "../Includes/Shallow.h"
-#include "../Includes/Deep.h"
-#include "../Includes/Move.h"
-#include "../Includes/Movie.h"
-#include "../Includes/Movies.h"
-#include "../Includes/MyString.h"
-#include "../Includes/MSC.h"
-#include "../Includes/MSCNonMember.h"
-#include "../Includes/SavingsAccountInherit.h"
-#include "../Includes/Base.h"
-#include "../Includes/Derived.h"
-#include "../Includes/AccountUtil.h"
+#include "Player.h"
+#include "Account.h"
+#include "AccountInherit.h"
+#include "Shallow.h"
+#include "Deep.h"
+#include "Move.h"
+#include "Movie.h"
+#include "Movies.h"
+#include "MyString.h"
+#include "MSC.h"
+#include "MSCNonMember.h"
+#include "SavingsAccountInherit.h"
+#include "Base.h"
+#include "Derived.h"
+#include "AccountUtil.h"
+#include "CheckingAccount.h"
+#include "TrustAccount.h"
 
 // Santantua.cpp
 void	Sastantua();
@@ -194,7 +196,7 @@ void	DisplayDeep(Deep Source);
 void	MoveConstructor();
 void	ConstObject();
 void	StaticClass();
-void	ClassChallenge();
+void	ClassChallenge_00();
 
 /*************************************
 *            Secion14.cpp            *
@@ -217,6 +219,7 @@ void	OverloadingOperatorChallenge();
 void	ClassInheritance();
 void	ClassProtected();
 void	ClassRedefine();
+void	ClassChallenge_01();
 void	InheritanceChallenge();
 
 #endif

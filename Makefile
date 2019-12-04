@@ -27,6 +27,8 @@ SRCS = Main.cpp \
 	AccountUtil.cpp \
 	Base.cpp \
 	Derived.cpp \
+	CheckingAccount.cpp \
+	TrustAccount.cpp \
 	Sastantua.cpp \
 	Section04.cpp \
 	Section05.cpp \

@@ -46,7 +46,7 @@ void	ClassRedefine()
 	// cout << MySavingsAccount << endl;
 }
 
-void	InheritanceChallenge()
+void	ClassChallenge_01()
 {
 	cout.precision(2);
 	cout << fixed;
@@ -68,4 +68,31 @@ void	InheritanceChallenge()
 	Display(SavingsAccounts),
 	Deposit(SavingsAccounts, 1000);
 	Withdraw(SavingsAccounts, 2000);
+}
+
+void	InheritanceChallenge()
+{
+	cout.precision(2);
+	cout << fixed;
+
+	vector<CheckingAccount> CheckingAccounts;
+	CheckingAccounts.push_back(CheckingAccount {});
+	CheckingAccounts.push_back(CheckingAccount {"Kirk"});
+	CheckingAccounts.push_back(CheckingAccount {"Spock", 2000});
+	CheckingAccounts.push_back(CheckingAccount {"Bones", 5000});
+	Display(CheckingAccounts),
+	Deposit(CheckingAccounts, 1000);
+	Withdraw(CheckingAccounts, 2000);
+
+	vector<TrustAccount> TrustAccounts;
+	TrustAccounts.push_back(TrustAccount {});
+	TrustAccounts.push_back(TrustAccount {"Athos", 10'000, 5.0});
+	TrustAccounts.push_back(TrustAccount {"Porthos", 20'000, 4.0});
+	TrustAccounts.push_back(TrustAccount {"Aramis", 30'000});
+	Display(TrustAccounts),
+	Deposit(TrustAccounts, 1000);
+	Withdraw(TrustAccounts, 2000);
+
+	for (size_t Counter {0}; Counter <= 5; Counter++)
+		Withdraw(TrustAccounts, 1000);
 }
