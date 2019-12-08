@@ -11,9 +11,45 @@
 
 using namespace std;
 
-void	func(shared_ptr<Account> P)
+// void	func(shared_ptr<Account> P)
+// {
+// 	cout << "Use Count: " << P.use_count() << endl;
+// }
+
+class Test
 {
-	cout << "Use Count: " << P.use_count() << endl;
+	private:
+	int	data;
+	public:
+	Test() : data {0} { cout << "Test Constructor: " << data << endl; }
+	Test(int data) : data {data} { cout << "Test Constructor: " << data << endl; }
+	int	getData() const { return data; }
+	~Test() { cout << "Test destructor: " << data << endl; }
+};
+
+unique_ptr<vector<shared_ptr<Test>>> make()
+{
+	return make_unique<vector<shared_ptr<Test>>>();
+}
+
+void fill(vector<shared_ptr<Test>> &vec, int num)
+{
+	int temp;
+
+	for (size_t Counter {0}; Counter < num; Counter++)
+	{
+		cout << "Enter data points [" << Counter << "]";
+		cin >> temp;
+		// shared_ptr<Temp> ptr = make_shared<Test>(temp);
+		// vec.push_back(ptr);
+		vec.push_back(make_shared<Test>(temp));
+	}
+}
+
+void display(const vector<shared_ptr<Test>> &vec)
+{
+	for (const auto &v : vec)
+		cout << v->getData() << endl;
 }
 
 int main() {
@@ -89,21 +125,53 @@ int main() {
 	// }
 	// cout << "Use Count: " << Test.use_count() << endl;
 
-	shared_ptr<Account> A1 = make_shared<Checking_Account>("Larry", 1000);
-	shared_ptr<Account> A2 = make_shared<Savings_Account>("Moe", 2000, 4.5);
-	shared_ptr<Account> A3 = make_shared<Trust_Account>("Curly", 3000, 5.2);
+	// shared_ptr<Account> A1 = make_shared<Checking_Account>("Larry", 1000);
+	// shared_ptr<Account> A2 = make_shared<Savings_Account>("Moe", 2000, 4.5);
+	// shared_ptr<Account> A3 = make_shared<Trust_Account>("Curly", 3000, 5.2);
 
-	vector<shared_ptr<Account>> Accounts;
+	// vector<shared_ptr<Account>> Accounts;
 
-	Accounts.push_back(A1);
-	Accounts.push_back(A2);
-	Accounts.push_back(A3);
+	// Accounts.push_back(A1);
+	// Accounts.push_back(A2);
+	// Accounts.push_back(A3);
 
-	for (const auto &Acc : Accounts)
-	{
-		cout << *Acc << endl;
-		cout << Acc.use_count() << endl;
-	}
+	// for (const auto &Acc : Accounts)
+	// {
+	// 	cout << *Acc << endl;
+	// 	cout << Acc.use_count() << endl;
+	// }
+
+/****************************************
+*             WEAK POINTER              *
+****************************************/
+
+	// If you have 2 classes that has "SHARED_PTR" towards each other, the memory will never be released since they keep each other alive
+		// Destructors will never be called
+	// in this case, use "WEAK_PTR" in one of the classes instead
+		// Destructors will be called
+
+/****************************************
+*            CUSTOM DELETER             *
+****************************************/
+
+	// Use function of lamba deleter
+	// When isntantiating a smart_ptr, use "new"
+
+	// shared_ptr<Account> A1 {new Checking_Account {"Joe", 100}, my_deleter}
+	// shared_ptr<Account> A1 {new Checking_Account {"Joe", 100},
+	// 	[] (Account *PTR)
+	// 	{
+	// 		cout << "MY DELETER" << endl;
+	// 		delete PTR;
+	// 	}};
+
+	unique_ptr<vector<shared_ptr<Test>>> vec_ptr;
+	vec_ptr = make();
+	cout << "How many data points do you want to enter: ";
+	int num;
+	cin >> num;
+	fill(*vec_ptr, num);
+	display(*vec_ptr);
 
 	return 0;
 }
