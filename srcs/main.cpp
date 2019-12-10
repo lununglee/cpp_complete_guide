@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	BoolIO();
+	IntIO();
 	return 0;
 }

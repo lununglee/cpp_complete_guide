@@ -23,3 +23,30 @@ void	BoolIO()
 	cout << "reset boolalpha: " << (10 == 10) << endl;
 	cout << "reset boolalpha: " << (10 == 20) << endl;
 }
+
+void	IntIO()
+{
+	int	Num {255};
+	int	Num1 {255};
+	int	Num2 {-255};
+
+	std::cout << std::dec << Num << endl;
+	std::cout << std::hex << Num << endl;
+	std::cout << std::oct << Num << endl << endl;
+
+	std::cout << std::showbase;
+	std::cout << std::dec << Num << endl;
+	std::cout << std::hex << Num << endl;
+	std::cout << std::oct << Num << endl << endl;
+
+	std::cout << std::noshowbase;
+	std::cout << std::dec << std::showpos;
+	std::cout << Num1 << endl;
+	std::cout << Num2 << endl << endl;
+
+	// Reset IO Flags
+	std::cout << std::resetiosflags(std::ios::basefield);
+	std::cout << std::resetiosflags(std::ios::showbase);
+	std::cout << std::resetiosflags(std::ios::showpos);
+	std::cout << std::resetiosflags(std::ios::uppercase);
+}
