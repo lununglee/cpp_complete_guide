@@ -257,5 +257,8 @@ double	CalculateMPG(int Miles, int Gallons);
 
 void	BoolIO();
 void	IntIO();
+void	FloatIO();
+void	FormatIO();
+void	IOChallenge();
 
 #endif
