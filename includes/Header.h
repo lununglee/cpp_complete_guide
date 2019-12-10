@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <ctime>
+#include <memory>
 
 using std::cout;
 using std::cin;
@@ -24,6 +25,7 @@ using std::strlen;
 using std::strcpy;
 using std::ostream;
 using std::istream;
+using std::cerr;
 
 #include "Player.h"
 #include "Account.h"
@@ -221,5 +223,31 @@ void	ClassProtected();
 void	ClassRedefine();
 void	ClassChallenge_01();
 void	InheritanceChallenge();
+
+/*************************************
+*            Secion16.cpp            *
+*************************************/
+
+void	Polymorphism();
+void	Override();
+void	BaseClassReference();
+void	PureVirtual();
+void	Interface();
+void	PolymorphismChallenge();
+
+/*************************************
+*            Secion17.cpp            *
+*************************************/
+
+void	SmartPointers();
+
+/*************************************
+*            Secion18.cpp            *
+*************************************/
+
+void	ErrorHandling();
+void	ErrorHandlingCatch();
+void	ErrorHandlingFunc();
+double	CalculateMPG(int Miles, int Gallons);
 
 #endif

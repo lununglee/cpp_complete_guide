@@ -2,7 +2,6 @@
 
 int		main(void)
 {
-	ClassChallenge_01();
-	InheritanceChallenge();
+	ErrorHandlingFunc();
 	return 0;
 }
