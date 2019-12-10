@@ -135,23 +135,29 @@ Tours Tours
 		}
 	};
 
+	constexpr int	CountryWidth {12};
+	constexpr int	CityWidth {15};
+	constexpr int	PopWidth {14};
+	constexpr int	CostWidth {10};
+
 	// Unformatted display so you can see how to access the vector elements
 	std::cout << Tours.Title << std::endl;
-	std::cout << std::setw(12) << std::left << "Country";
-	std::cout << std::setw(15) << std::left << "City";
-	std::cout << std::setw(14) << std::right << "Population";
-	std::cout << std::setw(10) << std::right << "Cost" << std::endl;
+	std::cout << std::setw(CountryWidth) << std::left << "Country";
+	std::cout << std::setw(CityWidth) << std::left << "City";
+	std::cout << std::setw(PopWidth) << std::right << "Population";
+	std::cout << std::setw(CostWidth) << std::right << "Cost" << std::endl;
 	for (size_t i {0}; i < 64; i++)
 		std::cout << "-";
 	std::cout << std::endl;
 	for(auto Country : Tours.Countries) {   // loop through the Countries
-		std::cout << std::setw(12) << std::left << Country.Name;
+		std::cout << std::setw(CountryWidth) << std::left << Country.Name;
 		for(size_t i {0}; i < Country.Cities.size(); i++) {       // loop through the cities for each country
 			if (i != 0)
-				std::cout << "            ";
-			std::cout << std::setw(16) << std::left << Country.Cities.at(i).Name 
-						<< std::fixed << std::setprecision(2) << std::setw(14) << std::right << Country.Cities.at(i).Population 
-						<< std::fixed << std::setprecision(2) << std::setw(10) << std::right << Country.Cities.at(i).Cost 
+				for (size_t j {0}; j < CountryWidth; j++)
+					std::cout << " ";
+			std::cout << std::setw(CityWidth) << std::left << Country.Cities.at(i).Name 
+						<< std::fixed << std::setprecision(2) << std::setw(PopWidth) << std::right << Country.Cities.at(i).Population 
+						<< std::fixed << std::setprecision(2) << std::setw(CostWidth) << std::right << Country.Cities.at(i).Cost 
 						<< std::endl;
 		}
 	}
