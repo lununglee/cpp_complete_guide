@@ -21,6 +21,7 @@ using std::vector;
 using std::fixed;
 using std::setprecision;
 using std::boolalpha;
+using std::noboolalpha;
 using std::strlen;
 using std::strcpy;
 using std::ostream;
@@ -249,5 +250,11 @@ void	ErrorHandling();
 void	ErrorHandlingCatch();
 void	ErrorHandlingFunc();
 double	CalculateMPG(int Miles, int Gallons);
+
+/*************************************
+*            Secion19.cpp            *
+*************************************/
+
+void	BoolIO();
 
 #endif

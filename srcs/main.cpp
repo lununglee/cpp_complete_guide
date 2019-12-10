@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	ErrorHandlingFunc();
+	BoolIO();
 	return 0;
 }
