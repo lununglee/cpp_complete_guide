@@ -78,3 +78,37 @@ void	FunctionTemplates()
 	cout << P3.Name << " is older" << endl;
 	cout << P3 << P2 << P1;
 }
+
+// #include <iostream>
+// #include <string>
+
+// struct Person
+// {
+// 	std::string Name;
+// 	int			Age;
+// 	bool operator>(const Person &Rhs)
+// 	{
+// 		return this->Age > Rhs.Age;
+// 	}
+// };
+
+// template <typename T>
+// T Max(T A, T B)
+// {
+// 	return A > B ? A : B;
+// }
+
+// std::ostream &operator<<(std::ostream &OS, const Person &Source)
+// {
+// 	OS << Source.Name << " | " << Source.Age << std::endl;
+// 	return OS;
+// }
+
+// int main()
+// {
+// 	Person P1 {"Joe", 20};
+// 	Person P2 {"Curly", 35};
+// 	Person P3 = Max(P1, P2);
+// 	std::cout << P3;
+// 	return 0;
+// }
