@@ -102,7 +102,7 @@ struct Tours {
 	std::vector<Country>	Countries;
 };
 
-void	IOChallenge()
+void	IOChallenge_00()
 {
 Tours Tours
 		{ "Tour Ticket Prices from Miami",
@@ -163,4 +163,109 @@ Tours Tours
 	}
 
 	std::cout << std::endl << std::endl;
+}
+
+void	FileIO()
+{
+	// opening and reading file
+	// std::fstream File {"Test.txt", std::ios::in};
+
+	// std::ifstream File {"../MyFile.txt"};
+
+	std::ifstream File;
+	std::string Filename;
+	cin >> Filename;
+	File.open(Filename);
+
+	// opening and reading file in binary mode
+	// std::fstream File {"../MyFile.txt", std::ios::in | std::ios::binary};
+
+	// std::fstream File {"../MyFile.txt", std::ios::binary};
+
+	// File.open(Filename, std::ios::binary);
+
+	if (File.is_open()) // if (File)
+		clog << "File is opened" << endl;
+	else
+	{
+		cerr << "File is not opened" << endl;
+		return ;
+	}
+
+	string	Name {};
+	int		Num {};
+	double	Total {};
+
+	// Name
+	File >> Name >> Num >> Total;
+	std::cout << Name << endl << Num << endl << Total << endl;
+	while (File >> Name >> Num >> Total)
+	{
+		std::cout << std::setw(10) << std::left << Name;
+		std::cout << std::setw(10) << Num;
+		std::cout << std::setw(10) << Total << endl;
+	}
+	
+	// // Sonnet
+	// string	Line {};
+	// while (std::getline(File, Line))
+	// 	std::cout << Line << endl;
+
+	File.close(); // important
+}
+
+void	IOChallenge_01()
+{
+	string	AnswerKey {};
+	string	Name {};
+	string	Answer {};
+	int		Score {};
+
+	std::ifstream File {"response"};
+	std::getline(File, AnswerKey);
+	std::cout << std::setw(10) << std::left << "Student"
+				<< std::setw(10) << std::right << "Score" << endl;
+	for (size_t Counter {0}; Counter < 20; Counter++)
+		std::cout << "-";
+	std::cout << endl;
+	while(File >> Name >> Answer)
+	{
+		Score = 0;
+		std::cout << std::setw(10) << std::left << Name;
+		for (size_t Counter {0}; Counter < AnswerKey.length(); Counter++)
+		{
+			if (Answer.at(Counter) == AnswerKey.at(Counter))
+				Score++;
+			else
+				;
+		}
+		std::cout << std::setw(10) << std::right << Score << endl;
+	}
+}
+
+bool	Find(string Word, string Key)
+{
+	size_t Found = Word.find(Key);
+	if (Found == string::npos)
+		return false;
+	return true;
+}
+
+void	IOChallenge_02()
+{
+	string	Word {};
+	string	Key {"Juliet"};
+	size_t	Occurence {0};
+	size_t	WordCount {0};
+
+	std::ifstream File {"shakespeare"};
+	while (File >> Word)
+	{
+		WordCount++;
+		for (auto Char : Word)
+			Char = tolower(Char);
+		if (Find(Word, Key))
+			Occurence++;
+	}
+	std::cout << WordCount << ": " << Occurence << endl;
 }

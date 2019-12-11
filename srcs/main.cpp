@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	IOChallenge();
+	IOChallenge_02();
 	return 0;
 }

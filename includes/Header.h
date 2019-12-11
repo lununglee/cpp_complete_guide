@@ -11,7 +11,8 @@
 #include <cstdlib>
 #include <cmath>
 #include <ctime>
-#include <memory>
+#include <memory>	// section 17
+#include <fstream>	// section 19
 
 using std::cout;
 using std::cin;
@@ -27,6 +28,8 @@ using std::strcpy;
 using std::ostream;
 using std::istream;
 using std::cerr;
+using std::fstream;
+using std::clog;
 
 #include "Player.h"
 #include "Account.h"
@@ -259,6 +262,9 @@ void	BoolIO();
 void	IntIO();
 void	FloatIO();
 void	FormatIO();
-void	IOChallenge();
+void	IOChallenge_00();
+void	FileIO();
+void	IOChallenge_01();
+void	IOChallenge_02();
 
 #endif

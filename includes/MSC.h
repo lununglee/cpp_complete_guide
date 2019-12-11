@@ -24,21 +24,21 @@ class MSC
 	// Mover
 	MSC(MSC &&Source);
 	// Overloader
-	MSC					&operator=(const MSC &Source);
-	MSC					&operator=(MSC &&Source);
-	friend ostream		&operator<<(ostream &OS, const MSC &Source);
-	friend istream		&operator>>(istream &IS, MSC &Source);
-	MSC					operator-();
-	MSC					operator+(const MSC &Source);
-	MSC					&operator+=(const MSC &Source);
-	MSC					operator*(size_t Number);	
-	MSC					&operator*=(size_t Number);
-	bool				operator==(const MSC &Source) const;
-	bool				operator!=(const MSC &Source) const;
-	bool				operator<(const MSC &Source) const;
-	bool				operator>(const MSC &Source) const;
-	MSC					&operator++();
-	MSC					operator++(int);
+	MSC				&operator=(const MSC &Source);
+	MSC				&operator=(MSC &&Source);
+	friend ostream	&operator<<(ostream &OS, const MSC &Source);
+	friend istream	&operator>>(istream &IS, MSC &Source);
+	MSC				operator-();
+	MSC				operator+(const MSC &Source);
+	MSC				&operator+=(const MSC &Source);
+	MSC				operator*(size_t Number);	
+	MSC				&operator*=(size_t Number);
+	bool			operator==(const MSC &Source) const;
+	bool			operator!=(const MSC &Source) const;
+	bool			operator<(const MSC &Source) const;
+	bool			operator>(const MSC &Source) const;
+	MSC				&operator++();
+	MSC				operator++(int);
 	// Destructor
 	~MSC();
 	// Setters
