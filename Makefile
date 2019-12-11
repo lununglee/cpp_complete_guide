@@ -45,7 +45,8 @@ SRCS = Main.cpp \
 	Section16.cpp \
 	Section17.cpp \
 	Section18.cpp \
-	Section19.cpp
+	Section19.cpp \
+	Section20.cpp
 
 OBJS = $(addprefix $(OBJDIR),$(SRCS:.cpp=.o))
 

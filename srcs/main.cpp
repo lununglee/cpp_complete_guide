@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	StringStream();
+	FunctionTemplates();
 	return 0;
 }

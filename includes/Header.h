@@ -14,6 +14,8 @@
 #include <memory>	// section 17
 #include <fstream>	// section 19
 #include <sstream>
+#include <algorithm>
+#include <numeric>
 
 using std::cout;
 using std::cin;
@@ -270,5 +272,15 @@ void	IOChallenge_02();
 void	FileOutIO();
 void	IOChallenge_03();
 void	StringStream();
+
+/*************************************
+*            Secion20.cpp            *
+*************************************/
+
+template <typename T>
+void	Sort();
+void	Macros();
+// int		Max(int A, int B);
+void	FunctionTemplates();
 
 #endif

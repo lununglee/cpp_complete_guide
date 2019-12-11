@@ -329,5 +329,4 @@ void	StringStream()
 			cout << "Not an int";
 		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	} while (!Done);
-	
 }
