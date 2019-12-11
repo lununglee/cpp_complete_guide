@@ -47,6 +47,22 @@ T Max(T A, T B)
 	return A > B ? A : B;
 }
 
+struct Person
+{
+	std::string	Name;
+	int			Age;
+	bool operator>(const Person &Rhs) const
+	{
+		return this->Age > Rhs.Age;
+	}
+};
+
+std::ostream &operator<<(std::ostream &OS, const Person &Rhs)
+{
+	OS << Rhs.Name << " | " << Rhs.Age << endl;
+	return OS;
+}
+
 void	FunctionTemplates()
 {
 	int	A {10};
@@ -55,4 +71,10 @@ void	FunctionTemplates()
 	double	D {45.6};
 	cout << Max<int>(A, B) << endl;;
 	cout << Max<double>(C, D) << endl;
+
+	Person P1 {"Moe", 25};
+	Person P2 {"Curly", 45};
+	Person P3 = Max(P1, P2);
+	cout << P3.Name << " is older" << endl;
+	cout << P3 << P2 << P1;
 }
