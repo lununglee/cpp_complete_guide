@@ -13,6 +13,7 @@
 #include <ctime>
 #include <memory>	// section 17
 #include <fstream>	// section 19
+#include <sstream>
 
 using std::cout;
 using std::cin;
@@ -263,8 +264,11 @@ void	IntIO();
 void	FloatIO();
 void	FormatIO();
 void	IOChallenge_00();
-void	FileIO();
+void	FileInIO();
 void	IOChallenge_01();
 void	IOChallenge_02();
+void	FileOutIO();
+void	IOChallenge_03();
+void	StringStream();
 
 #endif

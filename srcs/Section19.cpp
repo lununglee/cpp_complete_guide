@@ -165,7 +165,7 @@ Tours Tours
 	std::cout << std::endl << std::endl;
 }
 
-void	FileIO()
+void	FileInIO()
 {
 	// opening and reading file
 	// std::fstream File {"Test.txt", std::ios::in};
@@ -268,4 +268,66 @@ void	IOChallenge_02()
 			Occurence++;
 	}
 	std::cout << WordCount << ": " << Occurence << endl;
+	File.close();
+}
+
+void	FileOutIO()
+{
+	// // truncate when opening (discard content)
+	// std::ofstream File {"test", std::ios::trunc};
+	// // append to file on each write
+	// std::ofstream File {"test", std::ios::app};
+	// // seek tot end of stream when opening
+	// std::ofstream File {"test", std::ios::ate};
+	std::ofstream File {"output"};
+	string	Line;
+	getline(cin, Line);
+	File << Line << endl;
+	File.close();
+}
+
+void	IOChallenge_03()
+{
+	std::ifstream	FileIn {"shakespeare"};
+	std::ofstream	FileOut {"shakespearenum"};
+
+	string			Line {};
+	size_t			LineNum {1};
+	while (!FileIn.eof())
+	{
+		std::getline(FileIn, Line);
+		FileOut << LineNum++ << "\t" << Line << endl;
+	}
+}
+
+void	StringStream()
+{
+	// std::string	Name {};
+	// int		Num {};
+	// double	Total {};
+
+	// std::string	Info {"Moe 100 1234.5"};
+	// std::istringstream ISS {Info};
+
+	// ISS >> Name >> Num >> Total;
+	// cout << Name << " | " << Num << " | " << Total << endl;
+
+	// std::ostringstream OSS {};
+	// OSS << Name << Num << Total << endl;
+	// cout << OSS.str() << endl;
+
+	int		Value {};
+	string	Entry {};
+	bool	Done {false};
+	do {
+		std::cout << "Please enter number: ";
+		cin >> Entry;
+		std::istringstream Val {Entry};
+		if (Val >> Value)
+			Done = true;
+		else
+			cout << "Not an int";
+		cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	} while (!Done);
+	
 }

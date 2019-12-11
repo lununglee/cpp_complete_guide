@@ -2,6 +2,6 @@
 
 int		main(void)
 {
-	IOChallenge_02();
+	StringStream();
 	return 0;
 }
