@@ -22,7 +22,6 @@ public:
 	// Destructor
 	~Player();
 
-
 	// Setters
 	void		SetName(std::string NameToSet);
 	void		SetHealth(int HealthToSet);

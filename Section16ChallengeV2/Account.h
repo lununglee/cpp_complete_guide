@@ -18,4 +18,5 @@ public:
     virtual bool withdraw(double amount) = 0;
     virtual ~Account() = default;
 };
+
 #endif
